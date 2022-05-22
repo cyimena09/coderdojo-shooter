@@ -8,7 +8,7 @@ pygame.display.set_caption("Coder dojo Shooter")  # titre de la fenetre
 screen = pygame.display.set_mode((1080, 720))  # taille de la fenetre
 background = pygame.image.load("assets/bg.jpg")  # fond d'écran de la fenetre
 
-# générer le jeu
+# générer le jeu et le joueur
 game = Game()
 player = game.player
 

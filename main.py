@@ -27,7 +27,7 @@ while True:
 
         # 1.2. Si une touche du clavier a été appuyé
         elif event.type == pygame.KEYDOWN:
-            # game.pressed[event.key] = True # faire une action sans devoir appuyer plusieurs fois sur la touche
+            game.pressed[event.key] = True # faire une action sans devoir appuyer plusieurs fois sur la touche
             print("Le joueur a appuyé sur une touche")
             print(event.key)
 
@@ -42,7 +42,7 @@ while True:
 
         # 1.3. Si une touche du clavier a été relaché
         elif event.type == pygame.KEYUP:
-            # game.pressed[event.key] = True # permet d'arreter une action lorsque la touche est relachée
+            game.pressed[event.key] = False # permet d'arreter une action lorsque la touche est relachée
             print("Le joueur a relaché une touche")
             print(event.key)
 

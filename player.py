@@ -29,13 +29,13 @@ class Player(pygame.sprite.Sprite):
         self.projectiles.add(Projectile(self))
 
     def update_health_bar(self, surface):
-        # désiner la barre de vie total
+        # désiner la barre de vie totale
         pygame.draw.rect(surface, (60, 63, 60), [self.rect.x + 50, self.rect.y + 20, self.max_health, 7])
         # désiner la barre de vie acutel
         pygame.draw.rect(surface, (0, 102, 0), [self.rect.x + 50, self.rect.y + 20, self.health, 7])
 
     def damage(self, amount):  # dégat subit sur le joueur
-        # si les dégats sont inférieur ou = a 0, le joueur est décédé
+        # si les dégats sont inférieurs ou = a 0, le joueur est décédé
         if self.health - amount > amount:
             self.health -= amount
         else:
